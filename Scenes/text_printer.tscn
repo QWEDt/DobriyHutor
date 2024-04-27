@@ -5,7 +5,7 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_2q7oi"]
 font = ExtResource("2_46jl6")
-font_size = 128
+font_size = 48
 
 [node name="TextPrinter" type="CanvasLayer"]
 script = ExtResource("1_ccl0u")

@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx8v4x0nhsqv4"]
+[gd_scene load_steps=6 format=3 uid="uid://bx8v4x0nhsqv4"]
 
-[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_pfiul"]
+[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_pfiul"]
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_vwmtk"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_jsu43"]
-[ext_resource type="PackedScene" uid="uid://b81n0hq1s4f1e" path="res://Scenes/coin.tscn" id="3_2cf0r"]
+[ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_2cf0r"]
 [ext_resource type="Script" path="res://Scripts/Level1Coins.gd" id="3_fmmoe"]
 
 [node name="World" type="Node"]
+script = ExtResource("1_vwmtk")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("1_pfiul")
