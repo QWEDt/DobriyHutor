@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 30.0
 var current_direction := Vector2.RIGHT
 
 
