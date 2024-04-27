@@ -1,9 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://bf78t8puobag6"]
+[gd_scene load_steps=7 format=3 uid="uid://bf78t8puobag6"]
 
-[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_u4xrd"]
+[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_u4xrd"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_q7upg"]
+
 [ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_ecv1w"]
 [ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="4_y4202"]
+[ext_resource type="Script" path="res://Scripts/Spikes.gd" id="5_57jyf"]
+[ext_resource type="PackedScene" uid="uid://b2qwyqcnvu8rk" path="res://Scenes/spike.tscn" id="6_sbcn5"]
+
 
 [node name="Level2" type="Node"]
 
@@ -60,3 +64,30 @@ other = NodePath("To")
 
 [node name="To" type="Node2D" parent="Teleport2"]
 position = Vector2(-1, -104)
+
+[node name="Spike" type="Node" parent="."]
+script = ExtResource("5_57jyf")
+
+[node name="Spike" parent="Spike" instance=ExtResource("6_sbcn5")]
+position = Vector2(99, 76)
+
+[node name="Spike2" parent="Spike" instance=ExtResource("6_sbcn5")]
+position = Vector2(100, 56)
+
+[node name="Spike3" parent="Spike" instance=ExtResource("6_sbcn5")]
+position = Vector2(109, 99)
+
+[node name="Spike4" parent="Spike" instance=ExtResource("6_sbcn5")]
+position = Vector2(15, 8)
+
+[node name="Spike5" parent="Spike" instance=ExtResource("6_sbcn5")]
+position = Vector2(141, 58)
+scale = Vector2(1.03498, 0.971429)
+
+[connection signal="child_exiting_tree" from="Spike" to="Spike" method="_on_child_exiting_tree"]
+[connection signal="body_entered" from="Spike/Spike" to="Spike/Spike" method="_on_body_entered"]
+[connection signal="child_entered_tree" from="Spike/Spike" to="Spike" method="_on_spike_child_entered_tree"]
+[connection signal="body_entered" from="Spike/Spike2" to="Spike/Spike2" method="_on_body_entered"]
+[connection signal="body_entered" from="Spike/Spike3" to="Spike/Spike3" method="_on_body_entered"]
+[connection signal="body_entered" from="Spike/Spike4" to="Spike/Spike4" method="_on_body_entered"]
+[connection signal="body_entered" from="Spike/Spike5" to="Spike/Spike5" method="_on_body_entered"]
