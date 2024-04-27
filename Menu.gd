@@ -12,8 +12,7 @@ func _process(delta):
 
 
 func _on_start_button_button_up():
-	# TODO: move to game scene
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://Scenes/world.tscn")
 
 
 func _on_exit_button_button_up():
