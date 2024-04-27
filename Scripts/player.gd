@@ -3,7 +3,11 @@ extends CharacterBody2D
 
 const SPEED = 30.0
 var current_direction := Vector2.RIGHT
+@onready var animated_sprite_2d = $AnimatedSprite2D
 
+
+func _ready():
+	animated_sprite_2d.play("move")
 
 func _physics_process(delta):
 	velocity = current_direction * SPEED

@@ -1,10 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://prutlb18by4o"]
+[gd_scene load_steps=7 format=3 uid="uid://prutlb18by4o"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gec4f"]
-[ext_resource type="Texture2D" uid="uid://dvg4jrmsw2ot1" path="res://Textures/Pacman_03.png" id="2_sgbpe"]
+[ext_resource type="Texture2D" uid="uid://dvg4jrmsw2ot1" path="res://Textures/PacMan/Pacman_03.png" id="2_yacc2"]
+[ext_resource type="Texture2D" uid="uid://cutu0v6xjpxff" path="res://Textures/PacMan/Pacman_02.png" id="3_7s3kb"]
+[ext_resource type="Texture2D" uid="uid://cocg7evc4yriq" path="res://Textures/PacMan/Pacman_01.png" id="4_dmsis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5qud7"]
-size = Vector2(116, 124)
+size = Vector2(128, 126)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32xt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yacc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_yacc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7s3kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dmsis")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.1, 0.1)
@@ -12,13 +39,15 @@ collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_gec4f")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(7, 7)
-texture = ExtResource("2_sgbpe")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, -1)
 shape = SubResource("RectangleShape2D_5qud7")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(7, 7)
+sprite_frames = SubResource("SpriteFrames_32xt0")
+animation = &"move"
+frame = 2
+frame_progress = 0.134095
