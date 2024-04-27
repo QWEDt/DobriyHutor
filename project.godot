@@ -17,8 +17,8 @@ config/icon="res://Textures/icon.svg"
 
 [display]
 
-window/size/viewport_width=1024
-window/size/viewport_height=1024
+window/size/viewport_width=750
+window/size/viewport_height=750
 
 [input]
 

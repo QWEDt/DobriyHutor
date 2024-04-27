@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3ad5tqo8m6sc"
-path="res://.godot/imported/wall_horizontal.png-294a9eb6cc41c788ec112edf8c646006.ctex"
+uid="uid://dvg4jrmsw2ot1"
+path="res://.godot/imported/Pacman_03.png-63cab72a8c2d4dddd4f115d436c37d25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/WallsTiled/wall_horizontal.png"
-dest_files=["res://.godot/imported/wall_horizontal.png-294a9eb6cc41c788ec112edf8c646006.ctex"]
+source_file="res://Textures/PacMan/Pacman_03.png"
+dest_files=["res://.godot/imported/Pacman_03.png-63cab72a8c2d4dddd4f115d436c37d25.ctex"]
 
 [params]
 

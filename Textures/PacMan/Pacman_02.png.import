@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2msyq3mllpli"
-path="res://.godot/imported/wall_U_left.png-efb7347e8a12d4b462a0c99f63132c27.ctex"
+uid="uid://cutu0v6xjpxff"
+path="res://.godot/imported/Pacman_02.png-c93e754774b0161b2ddc4e874f34c9d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/WallsTiled/wall_U_left.png"
-dest_files=["res://.godot/imported/wall_U_left.png-efb7347e8a12d4b462a0c99f63132c27.ctex"]
+source_file="res://Textures/PacMan/Pacman_02.png"
+dest_files=["res://.godot/imported/Pacman_02.png-c93e754774b0161b2ddc4e874f34c9d3.ctex"]
 
 [params]
 
