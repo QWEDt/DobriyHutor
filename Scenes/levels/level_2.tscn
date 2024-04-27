@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bf78t8puobag6"]
 
-[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_u4xrd"]
+[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_u4xrd"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_dchnv"]
-[ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_gited"]
-[ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="4_vcani"]
+[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="3_gited"]
+[ext_resource type="PackedScene" path="res://Scenes/teleport.tscn" id="4_vcani"]
 
 [node name="Level2" type="Node"]
 
