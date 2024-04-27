@@ -43,6 +43,7 @@ size_flags_horizontal = 4
 text = "Выход"
 
 [node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.341176)
 show_behind_parent = true
 layout_mode = 0
 offset_right = 1253.0
