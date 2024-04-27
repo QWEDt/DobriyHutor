@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_77qgv"]
 [ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="3_s80v7"]
 [ext_resource type="PackedScene" uid="uid://lk08n4em5sl6" path="res://Scenes/dash_spawn.tscn" id="4_pflk5"]
-[ext_resource type="Script" path="res://Scenes/levels/Turrets.gd" id="5_68ki6"]
+[ext_resource type="Script" path="res://Scripts/Turrets.gd" id="5_68ki6"]
 [ext_resource type="PackedScene" uid="uid://njo2x3j5715i" path="res://Scenes/turret.tscn" id="5_ej4xf"]
 
 [node name="Level3" type="Node"]
