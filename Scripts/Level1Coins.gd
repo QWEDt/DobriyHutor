@@ -16,7 +16,6 @@ func _process(delta):
 func change_to_level_2():
 	get_tree().change_scene_to_file("res://Scenes/levels/level_2.tscn")
 	
-
 func _on_child_exiting_tree(node):
 	coins_count -= 1
 

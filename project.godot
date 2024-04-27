@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lushe Igr Ushe Ne Budet"
-run/main_scene="res://Scenes/control.tscn"
+run/main_scene="res://Scenes/levels/control.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
@@ -19,6 +19,7 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 Transition="*res://Scenes/transition.tscn"
 TextLabel="*res://Scenes/text_label.tscn"
 GameManager="*res://Scripts/GameManager.gd"
+TextPrinter="*res://Scenes/text_printer.tscn"
 
 [display]
 
