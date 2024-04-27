@@ -1,60 +1,62 @@
 [gd_scene load_steps=5 format=3 uid="uid://bf78t8puobag6"]
 
+[ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_q7upg"]
+[ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_ecv1w"]
+[ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="4_y4202"]
+=======
 [ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_u4xrd"]
-[ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_dchnv"]
-[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="3_gited"]
-[ext_resource type="PackedScene" path="res://Scenes/teleport.tscn" id="4_vcani"]
+
 
 [node name="Level2" type="Node"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource("1_u4xrd")
+tile_set = ExtResource("1_vd400")
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 1048580, 1, 131072, 1048580, 1, 196608, 1048580, 1, 262144, 1048580, 1, 327680, 1048580, 1, 393216, 1048580, 1, 458752, 1048580, 1, 524288, 1048580, 1, 589824, 1048580, 1, 0, 1048580, 0, 1, 1114116, 0, 2, 1114116, 0, 3, 983044, 1342177281, 6, 983044, 1342177282, 7, 1114116, 0, 8, 1114116, 0, 9, 1114116, 0, 10, 1114116, 0, 11, 1114116, 0, 12, 1114116, 0, 13, 1114116, 0, 14, 1114116, 0, 15, 1114116, 0, 16, 1114116, 0, 17, 1114116, 0, 18, 1114116, 0, 19, 1114116, 0, 655360, 1048580, 1, 720896, 1048580, 1, 786432, 1048580, 1, 851968, 1048580, 2, 851969, 1114116, 2, 851970, 1114116, 2, 851971, 983044, 1610612738, 851975, 1114116, 2, 851976, 1114116, 2, 851977, 1114116, 2, 851978, 1114116, 2, 851979, 1114116, 2, 851980, 983044, 805306369, 851981, 1114116, 2, 851982, 1114116, 2, 851983, 1114116, 2, 851984, 1114116, 2, 851985, 1114116, 2, 851986, 1114116, 2, 851987, 1114116, 2, 851988, 1179652, 2, 786452, 1179652, 1, 720916, 1179652, 1, 655380, 1179652, 1, 524308, 1179652, 1, 458772, 1179652, 1, 262164, 1179652, 1, 196628, 1179652, 1, 131092, 1179652, 1, 65556, 1179652, 1, 589844, 1179652, 1, 327700, 1179652, 1, 393236, 1179652, 1, 20, 1179652, 0, 786435, 1179652, 1, 262147, 1179652, 1, 196611, 1179652, 1, 131075, 1179652, 1, 65539, 1179652, 1, 524292, 1114116, 0, 524293, 1114116, 0, 524294, 1114116, 0, 524295, 1114116, 0, 524296, 1114116, 0, 524297, 1114116, 0, 524298, 1114116, 0, 524299, 1114116, 0, 524300, 1114116, 0, 524301, 1114116, 0, 524302, 1114116, 0, 851974, 983044, 1610612737, 786438, 1048580, 1, 65542, 1048580, 1, 131078, 1048580, 1, 196614, 1048580, 1, 262150, 1048580, 1, 524291, 1114116, 0, 524303, 1114116, 0, 786444, 1179652, 1, 720908, 1179652, 1, 196625, 1179652, 0, 327697, 1179652, 2, 327696, 1114116, 2, 327695, 1114116, 2, 327694, 1114116, 2, 327693, 1114116, 2, 327692, 1114116, 2, 327691, 1114116, 2, 327690, 1048580, 2, 262154, 1048580, 1, 196618, 1048580, 0, 196619, 1114116, 0, 196620, 1114116, 0, 196621, 1114116, 0, 196622, 1114116, 0, 196623, 1114116, 0, 196624, 1114116, 0, 262161, 1179652, 1, 917510, 1048580, 1, 983046, 1048580, 1, 1048582, 1048580, 1, 917507, 1179652, 1, 983043, 1179652, 1, 1048579, 1179652, 1, -65533, 1179652, 1, -131069, 1179652, 1, -196605, 1179652, 1, -65530, 1048580, 1, -131066, 1048580, 1, -196602, 1048580, 1, 524305, 1179652, 0, 589841, 1179652, 1, 655377, 1179652, 1, 524304, 1114116, 0)
 
-[node name="Player" parent="." instance=ExtResource("2_dchnv")]
+[node name="Player" parent="." instance=ExtResource("2_q7upg")]
 position = Vector2(14, 98)
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Area2D" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(115, 81)
 
-[node name="Area2D2" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D2" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(149, 96)
 
-[node name="Area2D3" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D3" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(70, 55)
 
-[node name="Area2D4" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D4" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(70, 19)
 
-[node name="Area2D5" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D5" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(150, 18)
 
-[node name="Area2D6" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D6" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(148, 58)
 
-[node name="Area2D7" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D7" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(40, 26)
 
-[node name="Area2D8" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D8" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(40, 82)
 
-[node name="Area2D9" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D9" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(15, 55)
 
-[node name="Area2D10" parent="Coins" instance=ExtResource("3_gited")]
+[node name="Area2D10" parent="Coins" instance=ExtResource("3_ecv1w")]
 position = Vector2(16, 18)
 
-[node name="Teleport" parent="." node_paths=PackedStringArray("other") instance=ExtResource("4_vcani")]
+[node name="Teleport" parent="." node_paths=PackedStringArray("other") instance=ExtResource("4_y4202")]
 position = Vector2(40, -12)
 other = NodePath("To")
 
 [node name="To" type="Node2D" parent="Teleport"]
 position = Vector2(0, 110)
 
-[node name="Teleport2" parent="." node_paths=PackedStringArray("other") instance=ExtResource("4_vcani")]
+[node name="Teleport2" parent="." node_paths=PackedStringArray("other") instance=ExtResource("4_y4202")]
 position = Vector2(41, 122)
 other = NodePath("To")
 
