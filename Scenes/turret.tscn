@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://njo2x3j5715i"]
+
+[ext_resource type="Script" path="res://Scripts/turret.gd" id="1_ibhw7"]
+[ext_resource type="Texture2D" uid="uid://dvg4jrmsw2ot1" path="res://Textures/PacMan/Pacman_03.png" id="2_cmyu3"]
+
+[node name="Turret" type="Node2D"]
+script = ExtResource("1_ibhw7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_cmyu3")
+
+[node name="BulletSpawn" type="Node2D" parent="."]
+position = Vector2(5, 0)
