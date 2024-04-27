@@ -13,7 +13,10 @@ config_version=5
 config/name="Lushe Igr Ushe Ne Budet"
 run/main_scene="res://Scenes/control.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Textures/icon.svg"
+
+[autoload]
+
+Transition="*res://Scenes/transition.tscn"
 
 [display]
 

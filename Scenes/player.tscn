@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://prutlb18by4o"]
+[gd_scene load_steps=7 format=3 uid="uid://prutlb18by4o"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gec4f"]
-[ext_resource type="Texture2D" uid="uid://phjr2edo8aab" path="res://Textures/backgroundGirl/backgroundGirl.jpg" id="2_4v6fk"]
 [ext_resource type="Texture2D" uid="uid://dvg4jrmsw2ot1" path="res://Textures/PacMan/Pacman_03.png" id="2_yacc2"]
 [ext_resource type="Texture2D" uid="uid://cutu0v6xjpxff" path="res://Textures/PacMan/Pacman_02.png" id="3_7s3kb"]
 [ext_resource type="Texture2D" uid="uid://cocg7evc4yriq" path="res://Textures/PacMan/Pacman_01.png" id="4_dmsis"]
@@ -45,13 +44,7 @@ shape = SubResource("CircleShape2D_kwt45")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5, 5)
-
-[node name="Sprite2D" type="Sprite2D" parent="Camera2D"]
-modulate = Color(1, 1, 1, 0.294118)
-show_behind_parent = true
-position = Vector2(-7.62939e-06, -10)
-scale = Vector2(1.46484, 1.44531)
-texture = ExtResource("2_4v6fk")
+position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(7, 7)
