@@ -6,7 +6,7 @@ var current_direction := Vector2.ZERO
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @export var can_dash = false
 
-const DEFOULT_HEALTH_COUNT = 5
+const DEFOULT_HEALTH_COUNT = 3
 var health_count = DEFOULT_HEALTH_COUNT
 
 
