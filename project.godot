@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 Transition="*res://Scenes/transition.tscn"
+TextLabel="*res://Scenes/text_label.tscn"
 
 [display]
 

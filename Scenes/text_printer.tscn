@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://xcu7qbqv58fv"]
+
+[ext_resource type="Script" path="res://Scripts/text_printer.gd" id="1_ccl0u"]
+[ext_resource type="FontFile" uid="uid://cndrvn3ca137a" path="res://MADE Waffle Slab PERSONAL USE.otf" id="2_46jl6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2q7oi"]
+font = ExtResource("2_46jl6")
+font_size = 128
+
+[node name="TextPrinter" type="CanvasLayer"]
+script = ExtResource("1_ccl0u")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -172.0
+offset_right = 345.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Test"
+label_settings = SubResource("LabelSettings_2q7oi")
+horizontal_alignment = 1
+autowrap_mode = 2
