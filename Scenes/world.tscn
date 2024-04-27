@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bmtqvsilmjb8h"]
+[gd_scene load_steps=6 format=3 uid="uid://ddfmg32fniykf"]
 
 [ext_resource type="Texture2D" uid="uid://cqqcdcnicdbfb" path="res://Textures/159361.png" id="2_noy4y"]
-[ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_62u6s"]
+[ext_resource type="PackedScene" path="res://Scenes/coin.tscn" id="3_62u6s"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="3_cxhrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1gjto"]
