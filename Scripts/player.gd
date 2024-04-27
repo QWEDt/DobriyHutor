@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 30.0
-var current_direction := Vector2.RIGHT
+var current_direction := Vector2.ZERO
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 
