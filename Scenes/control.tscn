@@ -48,8 +48,9 @@ show_behind_parent = true
 layout_mode = 1
 offset_left = 4.0
 offset_top = -2.0
-offset_right = 1028.0
-offset_bottom = 1022.0
+offset_right = 1134.0
+offset_bottom = 1120.0
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_kvvou")
 
 [connection signal="button_up" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_up"]
