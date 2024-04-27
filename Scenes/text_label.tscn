@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bp0nsadklyyod"]
 
-[ext_resource type="Script" path="res://LevelText.gd" id="1_70vsx"]
+[ext_resource type="Script" path="res://Scripts/LevelText.gd" id="1_70vsx"]
 [ext_resource type="FontFile" uid="uid://cndrvn3ca137a" path="res://MADE Waffle Slab PERSONAL USE.otf" id="2_tno24"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mihot"]
