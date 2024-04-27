@@ -16,7 +16,7 @@ func print_text(text: String):
 	
 	for letter in text:
 		label.text += letter
-		timer.start(0.08)
+		timer.start(0.06)
 		await timer.timeout
 	
 	timer.queue_free()

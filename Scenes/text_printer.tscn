@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://xcu7qbqv58fv"]
+[gd_scene load_steps=4 format=3 uid="uid://bbdyyo58tyw0i"]
 
 [ext_resource type="Script" path="res://Scripts/text_printer.gd" id="1_ccl0u"]
 [ext_resource type="FontFile" uid="uid://cndrvn3ca137a" path="res://MADE Waffle Slab PERSONAL USE.otf" id="2_46jl6"]

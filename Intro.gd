@@ -9,19 +9,19 @@ func _ready():
 Хочется смотреть в одну точку.")
 	var timer = Timer.new()
 	add_child(timer)
-	timer.start(13)
+	timer.start(10)
 	await timer.timeout
 	TextPrinter.print_text("Отвлекает очередной объект желающий удовлетворить свои потребности.
 Вопрос. Имя. Имя. Предложение. Понурое согласие.
 Игровой салон. Напиток. Таблетка.")
 
-	timer.start(16)
+	timer.start(12)
 	await timer.timeout
-	TextPrinter.print_text("Игровой автомат. В мониторе вижу свою отражение.
+	TextPrinter.print_text("Игровой автомат. В мониторе вижу своё отражение.
 Волосы умирают. Таблетка начинает брать.
 Вторая часть игры Pacman о которой трезвонят все вокруг.")
 	
-	timer.start(16)
+	timer.start(12)
 	await timer.timeout
 	TextPrinter.label.visible = false
 	Transition.transition_to_black()
