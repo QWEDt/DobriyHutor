@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://crsog3csldhkm"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_acuvm"]
-[ext_resource type="Texture2D" uid="uid://phjr2edo8aab" path="res://Textures/backgroundGirl.jpg" id="2_kvvou"]
+[ext_resource type="Texture2D" uid="uid://phjr2edo8aab" path="res://Textures/backgroundGirl/backgroundGirl.jpg" id="2_ij2oi"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -43,14 +43,12 @@ size_flags_horizontal = 4
 text = "Выход"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.608776, 0.491638, 0.331494, 1)
 show_behind_parent = true
-layout_mode = 1
-offset_left = 4.0
-offset_top = -2.0
-offset_right = 1028.0
-offset_bottom = 1022.0
-texture = ExtResource("2_kvvou")
+layout_mode = 0
+offset_right = 1253.0
+offset_bottom = 1245.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_ij2oi")
 
 [connection signal="button_up" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_button_up"]

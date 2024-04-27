@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Lushe Igr Ushe Ne Budet"
-run/main_scene="res://Scenes/world.tscn"
+run/main_scene="res://Scenes/control.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Textures/icon.svg"
 
@@ -19,6 +19,7 @@ config/icon="res://Textures/icon.svg"
 
 window/size/viewport_width=750
 window/size/viewport_height=750
+window/stretch/mode="canvas_items"
 
 [input]
 
