@@ -14,7 +14,7 @@ func _process(delta):
 func _on_start_button_button_up():
 	Transition.transition_to_black()
 	await Transition.on_transition_finished
-	get_tree().change_scene_to_file("res://Scenes/world.tscn")
+	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
 
 
 func _on_exit_button_button_up():
