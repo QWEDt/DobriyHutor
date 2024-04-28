@@ -31,4 +31,5 @@ func _ready():
 func _unhandled_key_input(event):
 	TextPrinter.label.visible = false
 	TextPrinter.audio_stream_player.stop()
+	TextPrinter.stop = true
 	get_tree().change_scene_to_file("res://Scenes/levels/control.tscn")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfue6aticnsv6"]
+
+[ext_resource type="Script" path="res://Scripts/AboutTeleports.gd" id="1_2ccv3"]
+
+[node name="AboutTeleports" type="Node"]
+script = ExtResource("1_2ccv3")

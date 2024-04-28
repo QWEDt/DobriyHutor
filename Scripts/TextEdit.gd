@@ -1,4 +1,4 @@
-extends TextEdit
+extends Label
 
 @onready var player = $"../.."
 

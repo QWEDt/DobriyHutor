@@ -60,7 +60,6 @@ func dash():
 
 func update_movement_buttons():
 	rand_dir.shuffle()
-	print(rand_dir)
 	var timer = Timer.new()
 	add_child(timer)
 	timer.start(10)
