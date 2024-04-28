@@ -1,15 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://b62vgts5rqkp5"]
+[gd_scene load_steps=23 format=3 uid="uid://lcxjga581fe0"]
 
 [ext_resource type="Script" path="res://Scripts/level 5.gd" id="1_sac5x"]
-[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="2_foj8r"]
+[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="2_foj8r"]
 [ext_resource type="Script" path="res://Scripts/animation1.gd" id="3_f2f7x"]
 [ext_resource type="Texture2D" uid="uid://cemlxq2rctuk4" path="res://Textures/Animation1.png" id="4_pcv3a"]
+[ext_resource type="PackedScene" uid="uid://cy3tv37ijomnt" path="res://Scenes/Glitch/glitch1.tscn" id="4_xd0lc"]
 [ext_resource type="Texture2D" uid="uid://b7ffp6x3schta" path="res://Textures/Animation2png.png" id="5_06j0e"]
 [ext_resource type="Texture2D" uid="uid://c8e1feg1nymg6" path="res://Textures/Animation3.png" id="6_nwmbq"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="7_j2rbs"]
 [ext_resource type="Texture2D" uid="uid://cwodji08c4dhi" path="res://Textures/dg0.png" id="8_558o4"]
 [ext_resource type="Texture2D" uid="uid://c2csqtg7t5hua" path="res://Textures/dg1.png" id="9_yrvx7"]
 [ext_resource type="Script" path="res://Scripts/animation2.gd" id="10_31mj1"]
+[ext_resource type="PackedScene" uid="uid://b1b7gybf68ihq" path="res://Scenes/Glitch/glitch2.tscn" id="10_srnsu"]
 [ext_resource type="Texture2D" uid="uid://yc8caal6kooq" path="res://Textures/just_black.png" id="11_nkhoo"]
 [ext_resource type="Script" path="res://Scripts/animation3.gd" id="11_vwntb"]
 [ext_resource type="Texture2D" uid="uid://dwgu7ddaccnol" path="res://Textures/key.png" id="12_unl1a"]
@@ -74,11 +76,7 @@ layer_0/tile_data = PackedInt32Array(-196608, 1310724, 0, -196607, 1310724, 0, -
 [node name="animation1" type="Node" parent="."]
 script = ExtResource("3_f2f7x")
 
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="animation1"]
-position = Vector2(189.109, 64.5)
-sprite_frames = SubResource("SpriteFrames_ofs30")
-animation = &"new_animation"
-frame_progress = 0.159198
+[node name="AnimatedSprite2D3" parent="animation1" instance=ExtResource("4_xd0lc")]
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="animation1"]
 position = Vector2(121.109, 75.5)
@@ -120,12 +118,7 @@ can_dash = true
 [node name="animation2" type="Node" parent="."]
 script = ExtResource("10_31mj1")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation2"]
-position = Vector2(92, 99)
-rotation = -0.261799
-sprite_frames = SubResource("SpriteFrames_60irp")
-animation = &"new_animation"
-frame_progress = 0.396862
+[node name="AnimatedSprite2D" parent="animation2" instance=ExtResource("10_srnsu")]
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="animation2"]
 position = Vector2(227, 98)

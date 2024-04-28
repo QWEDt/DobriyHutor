@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1b7gybf68ihq"]
+
+[ext_resource type="Texture2D" uid="uid://cwodji08c4dhi" path="res://Textures/dg0.png" id="1_c6ywd"]
+[ext_resource type="Texture2D" uid="uid://c2csqtg7t5hua" path="res://Textures/dg1.png" id="2_7q6vb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60irp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c6ywd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7q6vb")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 20.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(92, 99)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.396862

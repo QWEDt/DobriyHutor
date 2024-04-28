@@ -1,0 +1,99 @@
+[gd_scene load_steps=7 format=3 uid="uid://qeutivfhjs3g"]
+
+[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_3niyb"]
+[ext_resource type="Script" path="res://Scripts/animation1.gd" id="2_gnsc2"]
+[ext_resource type="PackedScene" uid="uid://cy3tv37ijomnt" path="res://Scenes/Glitch/glitch1.tscn" id="3_22m2r"]
+[ext_resource type="Script" path="res://Scripts/animation3.gd" id="4_3e4xn"]
+[ext_resource type="PackedScene" uid="uid://b1b7gybf68ihq" path="res://Scenes/Glitch/glitch2.tscn" id="5_h66ug"]
+[ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="6_vr3p6"]
+
+[node name="Level 4" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_3niyb")
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 1048580, 0, 131073, 1048580, 1, 196609, 1048580, 1, 262145, 1048580, 1, 327681, 1048580, 1, 393217, 1048580, 1, 458753, 1048580, 1, 524289, 1048580, 1, 589825, 1048580, 1, 65538, 1114116, 0, 65539, 1114116, 0, 65540, 1114116, 0, 65541, 1114116, 0, 65542, 1114116, 0, 65543, 1114116, 0, 65544, 1114116, 0, 65545, 1114116, 0, 65546, 1114116, 0, 65547, 1114116, 0, 65548, 1114116, 0, 65549, 1179652, 1, 65550, 1114116, 0, 65551, 1114116, 0, 262148, 1048580, 0, 262149, 1114116, 0, 262150, 1114116, 0, 262151, 1114116, 0, 262152, 1114116, 2, 262153, 1114116, 2, 262154, 1114116, 2, 262155, 1114116, 2, 262156, 1114116, 2, 262157, 1114116, 2, 262158, 1179652, 1, 655361, 1048580, 1, 720897, 1048580, 1, 786433, 1048580, 1, 851969, 1048580, 1, 917505, 1048580, 1, 983041, 1048580, 1, 1048577, 1048580, 1, 1114113, 1048580, 1, 1179649, 1048580, 1, 1245185, 1048580, 1, 1310721, 1048580, 1, 1376257, 1048580, 1, 1441793, 1048580, 1, 1507329, 1048580, 1, 1572865, 1048580, 1, 1638401, 1048580, 1, 1703937, 1048580, 1, 1769473, 1048580, 1, 1835009, 1048580, 1, 1900545, 1048580, 1, 1966081, 1048580, 1, 2031617, 1048580, 1, 2097153, 1048580, 1, 2162689, 1048580, 1, 2228225, 1048580, 1, 327684, 1048580, 1, 393220, 1048580, 1, 458756, 1048580, 1, 524292, 1048580, 1, 589828, 1048580, 1, 655364, 1048580, 1, 720900, 1048580, 1, 786436, 1048580, 1, 851972, 1048580, 1, 917508, 1048580, 1, 983044, 1048580, 1, 1048580, 1048580, 1, 1114116, 1048580, 1, 1179652, 1048580, 1, 1245188, 1048580, 1, 1310724, 1048580, 1, 1376260, 1048580, 1, 1441796, 1048580, 1, 1507332, 1048580, 1, 1572868, 1048580, 1, 1638404, 1048580, 1, 1703940, 1048580, 1, 1769476, 1048580, 1, 1835012, 1048580, 1, 1900548, 1048580, 1, 1966084, 1048580, 1, 2031620, 1048580, 1, 2097156, 1048580, 1, 2162692, 1048580, 1, 2228228, 1048580, 1, 262159, 1114116, 2, 262160, 1114116, 2, 262161, 1114116, 2, 262162, 1114116, 0, 262163, 1114116, 0, 262164, 1048580, 0, 262165, 1048580, 0, 262166, 1114116, 0, 262167, 1114116, 0, 262168, 1114116, 0, 262169, 1179652, 1, 262170, 1114116, 2, 262171, 1114116, 2, 262172, 1114116, 2, 262173, 1114116, 2, 262174, 1114116, 2, 262175, 983044, 2, 262176, 1114116, 2, 262177, 1114116, 0, 262178, 1114116, 0, 262179, 1114116, 0, 262180, 1179652, 1, 262181, 1114116, 0, 262182, 983044, 2, 262183, 1114116, 0, 262184, 1114116, 0, 262185, 1114116, 0, 262186, 1114116, 0, 262187, 1114116, 0, 65552, 1114116, 2, 65553, 1114116, 2, 65554, 1114116, 2, 65555, 1114116, 2, 65556, 1048580, 0, 65557, 1179652, 2, 65558, 1048580, 0, 65559, 1048580, 0, 65560, 1114116, 2, 65561, 1179652, 1, 65562, 1114116, 2, 65563, 983044, 2, 65564, 1114116, 2, 65565, 1114116, 2, 65566, 1114116, 2, 65567, 1114116, 2, 65572, 983044, 2, 65570, 1114116, 2, 65569, 1114116, 2, 65575, 1114116, 2, 65571, 1114116, 2, 65573, 1179652, 0, 65574, 1179652, 0, 65568, 1179652, 0, 65576, 1179652, 1, 65577, 1048580, 2, 65578, 983044, 1, 65579, 1179652, 1, 17, 1179652, 1, 327698, 1179652, 1, 30, 1179652, 1, 393244, 1114116, 0, 327706, 1114116, 0, 327711, 1114116, 0, 393251, 983044, 2, 393258, 983044, 2, 327719, 983044, 2, -65498, 1179652, 1, -65503, 1114116, 0, -65494, 1179652, 3, 2293761, 1048580, 2, 2293764, 1179652, 2, 2293762, 1114116, 2, 2293763, 1114116, 2)
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("2_gnsc2")
+
+[node name="AnimatedSprite2D3" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(171, 48)
+rotation = -0.523599
+
+[node name="AnimatedSprite2D4" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(168, 7.99999)
+rotation = -2.35619
+
+[node name="AnimatedSprite2D5" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(111, 43)
+rotation = -2.35619
+
+[node name="AnimatedSprite2D6" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(232, 29)
+rotation = -2.35619
+
+[node name="AnimatedSprite2D7" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(327, 17)
+rotation = -3.40339
+
+[node name="AnimatedSprite2D8" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(261, 18)
+rotation = -3.66519
+
+[node name="AnimatedSprite2D9" parent="Node" instance=ExtResource("3_22m2r")]
+position = Vector2(308, 34)
+rotation = -0.261799
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource("4_3e4xn")
+
+[node name="AnimatedSprite2D" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(246, 66)
+
+[node name="AnimatedSprite2D9" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(333, 47)
+rotation = 0.785398
+
+[node name="AnimatedSprite2D2" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(175, -16)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D3" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(292, -30)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D10" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(338, 8)
+
+[node name="AnimatedSprite2D11" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(295, 2.00001)
+rotation = -0.523599
+
+[node name="AnimatedSprite2D4" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(207, 60)
+rotation = 3.14159
+
+[node name="AnimatedSprite2D5" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(232, -10)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D6" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(281, 34)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D7" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(259, -23)
+rotation = 0.0
+
+[node name="AnimatedSprite2D8" parent="Node2" instance=ExtResource("5_h66ug")]
+position = Vector2(132, 9.00001)
+
+[node name="Player" parent="." instance=ExtResource("6_vr3p6")]
+position = Vector2(27.2215, 261.126)
+pitch = 0.5
+can_dash = true
+alternative_control = true
+
+[connection signal="child_entered_tree" from="Node" to="Node" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="Node2" to="Node2" method="_on_child_entered_tree"]

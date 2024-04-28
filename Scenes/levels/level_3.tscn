@@ -1,18 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8d7rnddu0xj"]
+[gd_scene load_steps=13 format=3 uid="uid://c8d7rnddu0xj"]
 
-
-[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_bgm5k"]
+[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_bgm5k"]
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_uap7b"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_77qgv"]
-
-
-
 [ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="3_s80v7"]
 [ext_resource type="PackedScene" uid="uid://lk08n4em5sl6" path="res://Scenes/dash_spawn.tscn" id="4_pflk5"]
 [ext_resource type="Script" path="res://Scripts/Turrets.gd" id="5_68ki6"]
 [ext_resource type="PackedScene" uid="uid://njo2x3j5715i" path="res://Scenes/turret.tscn" id="5_ej4xf"]
 [ext_resource type="AudioStream" uid="uid://i4mqr86t8846" path="res://Sound/horror-atmosphere-background(chosic.com).mp3" id="8_xddmx"]
-
+[ext_resource type="PackedScene" uid="uid://cy3tv37ijomnt" path="res://Scenes/Glitch/glitch1.tscn" id="9_4vrwn"]
+[ext_resource type="Script" path="res://Scripts/animation3.gd" id="9_dg8fn"]
+[ext_resource type="PackedScene" uid="uid://b1b7gybf68ihq" path="res://Scenes/Glitch/glitch2.tscn" id="10_jdar3"]
+[ext_resource type="Script" path="res://Scripts/animation2.gd" id="11_iowa1"]
 
 [node name="Level3" type="Node"]
 script = ExtResource("1_uap7b")
@@ -80,4 +79,54 @@ stream = ExtResource("8_xddmx")
 volume_db = -4.0
 autoplay = true
 
+[node name="Animation 2" type="Node" parent="."]
+script = ExtResource("9_dg8fn")
+
+[node name="AnimatedSprite2D" parent="Animation 2" instance=ExtResource("10_jdar3")]
+position = Vector2(16, 27)
+
+[node name="AnimatedSprite2D2" parent="Animation 2" instance=ExtResource("10_jdar3")]
+position = Vector2(10, 21)
+rotation = 0.0
+
+[node name="AnimatedSprite2D3" parent="Animation 2" instance=ExtResource("10_jdar3")]
+position = Vector2(19, 16)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D4" parent="Animation 2" instance=ExtResource("10_jdar3")]
+position = Vector2(10, 12)
+rotation = 0.261799
+
+[node name="AnimatedSprite2D5" parent="Animation 2" instance=ExtResource("10_jdar3")]
+position = Vector2(15, 21)
+rotation = 0.261799
+
+[node name="Animations" type="Node" parent="."]
+script = ExtResource("11_iowa1")
+
+[node name="AnimatedSprite2D3" parent="Animations" instance=ExtResource("9_4vrwn")]
+position = Vector2(228, 151)
+
+[node name="AnimatedSprite2D4" parent="Animations" instance=ExtResource("9_4vrwn")]
+position = Vector2(228, 158)
+rotation = 0.785398
+
+[node name="AnimatedSprite2D5" parent="Animations" instance=ExtResource("9_4vrwn")]
+position = Vector2(228, 145)
+rotation = -0.261799
+
+[node name="AnimatedSprite2D6" parent="Animations" instance=ExtResource("9_4vrwn")]
+position = Vector2(233, 155)
+rotation = 0.523599
+
+[node name="AnimatedSprite2D7" parent="Animations" instance=ExtResource("9_4vrwn")]
+position = Vector2(234, 146)
+rotation = 1.309
+
+[node name="AnimatedSprite2D3" parent="." instance=ExtResource("9_4vrwn")]
+position = Vector2(336.109, 213.5)
+
+[connection signal="on_dash_get" from="DashSpawn" to="Teleports/Teleport2" method="_on_dash_spawn_on_dash_get"]
 [connection signal="on_dash_get" from="DashSpawn" to="Turrets" method="_on_dash_spawn_on_dash_get"]
+[connection signal="child_entered_tree" from="Animation 2" to="Animation 2" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="Animations" to="Animations" method="_on_child_entered_tree"]

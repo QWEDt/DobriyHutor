@@ -1,5 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1oemsi8iinut"]
-
+[gd_scene load_steps=3 format=3 uid="uid://b1oemsi8iinut"]
 
 [ext_resource type="Script" path="res://Intro.gd" id="1_igpvq"]
 [ext_resource type="AudioStream" uid="uid://b1ika571a0reb" path="res://Sound/Keyboard-Typing(chosic.com).mp3" id="2_uqiuk"]
