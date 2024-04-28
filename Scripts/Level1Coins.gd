@@ -6,10 +6,10 @@ func _process(delta):
 	if coins_count > 0:
 		return
 	
-	TextLabel.show_text("ELVLE EMOPLCTID", 45, 1.5, 50)
+	TextLabel.show_text("LEVEL COMPLITED", 45)
 	var timer = Timer.new()
 	add_child(timer)
-	timer.start(1000)
+	timer.start(5)
 	await timer.timeout
 	change_to_level_2()
 
