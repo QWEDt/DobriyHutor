@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name Player
+
 var speed = 30.0
 var current_direction := Vector2.ZERO
 @export var pitch: float = 0.8

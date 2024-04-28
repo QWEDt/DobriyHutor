@@ -4,7 +4,9 @@
 [ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_u4xrd"]
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_q7upg"]
 [ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="3_ecv1w"]
+
 [ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="4_y4202"]
+
 [ext_resource type="Script" path="res://Scripts/Spikes.gd" id="5_57jyf"]
 [ext_resource type="PackedScene" path="res://Scenes/spike.tscn" id="6_sbcn5"]
 [ext_resource type="AudioStream" uid="uid://d3j10i54jnn26" path="res://Sound/3flp.mp3" id="8_h5jmx"]
