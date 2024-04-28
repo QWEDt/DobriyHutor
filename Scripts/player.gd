@@ -4,7 +4,9 @@ class_name Player
 
 var speed = 30.0
 var current_direction := Vector2.ZERO
+@export var pitch: float = 0.8
 
+@onready var audio_stream_player = $AudioStreamPlayer
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @export var can_dash = false
 
@@ -14,6 +16,7 @@ var health_count = DEFOULT_HEALTH_COUNT
 
 func _ready():
 	animated_sprite_2d.play("move")
+	audio_stream_player.pitch_scale = pitch
 
 func _physics_process(delta):
 	velocity = current_direction * speed

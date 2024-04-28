@@ -1,12 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://prutlb18by4o"]
+[gd_scene load_steps=9 format=3 uid="uid://prutlb18by4o"]
+
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_gec4f"]
 [ext_resource type="Texture2D" uid="uid://phjr2edo8aab" path="res://Textures/backgroundGirl/backgroundGirl.jpg" id="2_lpvjx"]
 [ext_resource type="Texture2D" uid="uid://dvg4jrmsw2ot1" path="res://Textures/PacMan/Pacman_03.png" id="2_yacc2"]
 [ext_resource type="Texture2D" uid="uid://cutu0v6xjpxff" path="res://Textures/PacMan/Pacman_02.png" id="3_7s3kb"]
 [ext_resource type="Texture2D" uid="uid://cocg7evc4yriq" path="res://Textures/PacMan/Pacman_01.png" id="4_dmsis"]
+[ext_resource type="AudioStream" uid="uid://rcjlaa7k3osu" path="res://Sound/275156702_313273693_1906460104 (mp3cut (mp3cut.net).mp3" id="6_irtwg"]
 [ext_resource type="Texture2D" uid="uid://1hrn8uengck5" path="res://Textures/heart.jpg" id="6_ol7ur"]
 [ext_resource type="Script" path="res://Scripts/TextEdit.gd" id="7_x6ufn"]
+
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kwt45"]
 radius = 50.0
@@ -66,6 +69,12 @@ offset_top = -87.0
 offset_right = 895.0
 offset_bottom = 937.0
 texture = ExtResource("2_lpvjx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_irtwg")
+volume_db = -16.0
+pitch_scale = 0.8
+autoplay = true
 metadata/_edit_use_anchors_ = true
 
 [node name="heart" type="TextureRect" parent="CanvasLayer"]
