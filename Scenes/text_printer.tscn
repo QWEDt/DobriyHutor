@@ -1,5 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://xcu7qbqv58fv"]
 
+
 [ext_resource type="Script" path="res://Scripts/text_printer.gd" id="1_ccl0u"]
 [ext_resource type="FontFile" uid="uid://cndrvn3ca137a" path="res://MADE Waffle Slab PERSONAL USE.otf" id="2_46jl6"]
 [ext_resource type="AudioStream" uid="uid://b1ika571a0reb" path="res://Sound/Keyboard-Typing(chosic.com).mp3" id="3_gxgwc"]
