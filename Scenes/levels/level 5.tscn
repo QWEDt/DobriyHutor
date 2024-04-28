@@ -1,0 +1,270 @@
+[gd_scene load_steps=21 format=3 uid="uid://b62vgts5rqkp5"]
+
+[ext_resource type="Script" path="res://Scripts/level 5.gd" id="1_sac5x"]
+[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="2_foj8r"]
+[ext_resource type="Script" path="res://Scripts/animation1.gd" id="3_f2f7x"]
+[ext_resource type="Texture2D" uid="uid://cemlxq2rctuk4" path="res://Textures/Animation1.png" id="4_pcv3a"]
+[ext_resource type="Texture2D" uid="uid://b7ffp6x3schta" path="res://Textures/Animation2png.png" id="5_06j0e"]
+[ext_resource type="Texture2D" uid="uid://c8e1feg1nymg6" path="res://Textures/Animation3.png" id="6_nwmbq"]
+[ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="7_j2rbs"]
+[ext_resource type="Texture2D" uid="uid://cwodji08c4dhi" path="res://Textures/dg0.png" id="8_558o4"]
+[ext_resource type="Texture2D" uid="uid://c2csqtg7t5hua" path="res://Textures/dg1.png" id="9_yrvx7"]
+[ext_resource type="Script" path="res://Scripts/animation2.gd" id="10_31mj1"]
+[ext_resource type="Texture2D" uid="uid://yc8caal6kooq" path="res://Textures/just_black.png" id="11_nkhoo"]
+[ext_resource type="Script" path="res://Scripts/animation3.gd" id="11_vwntb"]
+[ext_resource type="Texture2D" uid="uid://dwgu7ddaccnol" path="res://Textures/key.png" id="12_unl1a"]
+[ext_resource type="Script" path="res://Scripts/Level1Coins.gd" id="14_sidq4"]
+[ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="15_eog2i"]
+[ext_resource type="Script" path="res://Scripts/Turrets.gd" id="16_b1v5y"]
+[ext_resource type="PackedScene" uid="uid://njo2x3j5715i" path="res://Scenes/turret.tscn" id="17_gsjym"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ofs30"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pcv3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_06j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nwmbq")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 16.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_60irp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_558o4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_yrvx7")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bukti"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_nkhoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_unl1a")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 100.0
+}]
+
+[node name="Level5" type="Node"]
+script = ExtResource("1_sac5x")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_foj8r")
+format = 2
+layer_0/tile_data = PackedInt32Array(-196608, 1310724, 0, -196607, 1310724, 0, -196606, 655364, 4, -196605, 1376260, 0, -131069, 655364, 4, -65533, 1376260, 1, -131068, 983044, 0, -65532, 983044, 0, 4, 851972, 0, -196604, 786436, 0, -262140, 720900, 0, 65540, 917508, 0, 3, 1376260, 1, 65539, 655364, 4, 131075, 1376260, 2, 131074, 1310724, 2, 131073, 655364, 4, 196607, 655364, 4, 131072, 1310724, 2, 196606, 1310724, 2, 196605, 655364, 4, 196604, 1310724, 2, -131073, 1310724, 0, -131074, 655364, 4, -131076, 1310724, 0, -131075, 655364, 4, -131077, 1310724, 0, -131078, 1310724, 0, -131079, 1310724, 0, -131080, 655364, 4, -131081, 1310724, 0, -131082, 1310724, 0, -131083, 655364, 4, 196603, 655364, 4, 262138, 1310724, 2, 262137, 1310724, 0, 327672, 1703940, 1, 262135, 1310724, 0, 262134, 1310724, 2, 196597, 1310724, 0, 196596, 655364, 4, 196595, 1245188, 2, 131059, 655364, 4, 65523, 1245188, 1, -13, 655364, 4, -65549, 1245188, 1, -131085, 655364, 4, -131084, 1310724, 0, 262143, 917508, 2, 196609, 917508, 2, 262140, 917508, 2, 327675, 1703940, 1, 327670, 1703940, 1, 327669, 1703940, 1, 262132, 1703940, 1, 262131, 1703940, 1, 131058, 1703940, 1, 65522, 1703940, 1, 196611, 2097156, 0, 196610, 2097156, 0, 262145, 2097156, 0, 327679, 2097156, 0, 327678, 2097156, 0, 327677, 2097156, 0, 262141, 2097156, 0, 131076, 2097156, 0, -196611, 2293764, 2, -196610, 2359300, 2, -196616, 2293764, 2, -196615, 2359300, 2, 262136, 655364, 4, -7, 1245188, 8, -65535, 1245188, 8, 65535, 1245188, 8, 131066, 1245188, 8, 131065, 1245188, 8, 196600, 1245188, 8, 65528, 1245188, 8, -8, 1245188, 8, -196622, 1048580, 0, -196621, 1114116, 0, -196620, 1114116, 0, -196619, 1114116, 0, -196618, 1114116, 0, -196617, 1114116, 0, -262152, 1114116, 0, -262151, 1114116, 0, -262150, 1114116, 0, -196613, 1114116, 0, -196612, 1114116, 0, -196609, 1114116, 0, -262144, 1114116, 0, -262143, 1114116, 0, -262142, 1114116, 0, -262141, 1114116, 0, -327676, 1114116, 0, -262139, 1179652, 1, -196603, 1179652, 1, -131067, 1179652, 1, -65531, 1179652, 1, 5, 1179652, 1, 65541, 1179652, 1, 131077, 1179652, 1, 196613, 983044, 1, 262149, 1179652, 2, 262148, 1114116, 0, 262147, 1114116, 0, 262146, 1114116, 0, 327681, 1114116, 0, 327680, 1114116, 0, 393215, 1114116, 0, 393214, 1114116, 0, 393213, 1114116, 0, 393212, 1114116, 0, 393211, 1114116, 0, 393210, 1114116, 0, 393209, 1114116, 0, 393208, 1114116, 0, 393207, 1114116, 0, 393206, 1114116, 0, 393205, 1114116, 0, 393204, 1114116, 0, 393203, 1048580, 2, 327667, 1179652, 0, 327666, 983044, 1, 262130, 983044, 1, 196594, 1048580, 1, 131057, 1048580, 1, 65521, 1048580, 1, -14, 1048580, 1, -65550, 1048580, 1, -131086, 1048580, 1, 720905, 1703940, 1, 786441, 1703940, 1, 524298, 655364, 4, 589834, 1245188, 1, 655370, 655364, 4, 720906, 1245188, 1, 786442, 655364, 4, 851978, 1245188, 2, 917514, 1703940, 1, 524299, 1310724, 0, 851979, 655364, 4, 917515, 1703940, 1, 524300, 655364, 4, 851980, 1310724, 0, 983052, 1703940, 1, 524301, 1310724, 0, 917517, 1310724, 2, 983053, 1703940, 1, 524302, 1310724, 0, 917518, 1310724, 0, 458767, 2293764, 2, 524303, 655364, 4, 655375, 1245188, 8, 720911, 1245188, 8, 851983, 1245188, 8, 917519, 655364, 4, 983055, 1703940, 1, 458768, 2359300, 2, 524304, 1310724, 0, 655376, 1245188, 8, 786448, 1245188, 8, 917520, 1310724, 0, 524305, 1310724, 0, 786449, 1245188, 8, 917521, 1310724, 2, 524306, 1310724, 0, 851986, 655364, 4, 983058, 1703940, 1, 524307, 1310724, 0, 851987, 1310724, 2, 917523, 917508, 2, 458772, 2293764, 2, 524308, 655364, 4, 851988, 655364, 4, 917524, 2097156, 0, 983060, 2097156, 0, 458773, 2359300, 2, 524309, 655364, 4, 851989, 1310724, 2, 983061, 2097156, 0, 524310, 1310724, 0, 720918, 1245188, 8, 851990, 655364, 4, 917526, 917508, 2, 983062, 2097156, 0, 524311, 1310724, 0, 851991, 1310724, 2, 524312, 1310724, 0, 655384, 1245188, 8, 851992, 655364, 4, 917528, 917508, 2, 983064, 2097156, 0, 524313, 655364, 4, 851993, 1310724, 2, 917529, 2097156, 0, 524314, 1376260, 0, 589850, 655364, 4, 655386, 1376260, 1, 720922, 1376260, 1, 786458, 655364, 4, 851994, 1376260, 2, 917530, 2097156, 0, 458779, 720900, 0, 524315, 786436, 0, 589851, 983044, 0, 655387, 983044, 0, 720923, 851972, 0, 786459, 917508, 0, 851995, 2097156, 0, 720924, 983044, 1, 786460, 983044, 1, 851996, 1179652, 1, 983068, 1179652, 2, 393226, 983044, 2, 393227, 983044, 2, 393228, 983044, 2, 393229, 983044, 2, 393230, 983044, 2, 393231, 983044, 2, 393232, 983044, 2, 393233, 983044, 2, 393234, 983044, 2, 393235, 983044, 2, 393236, 983044, 2, 393237, 983044, 2, 393238, 983044, 2, 393239, 983044, 2, 393240, 983044, 2, 393241, 983044, 2, 393242, 983044, 2, 393243, 983044, 2, 393244, 983044, 1, 458780, 983044, 1, 524316, 983044, 1, 589852, 983044, 1, 655388, 983044, 1, 786461, 983044, 1, 786462, 983044, 1, 851998, 983044, 1, 851999, 983044, 1, 917535, 983044, 1, 983071, 983044, 1, 1048607, 983044, 1, 1114143, 983044, 1, 1114119, 983044, 1, 1114118, 983044, 1, 1048582, 983044, 1, 983046, 983044, 1, 917510, 983044, 1, 851974, 983044, 1, 851973, 917508, 3, 917509, 983044, 1, 917508, 983044, 1, 917507, 983044, 1, 983043, 983044, 1, 983042, 983044, 1, 983041, 983044, 1, 983040, 983044, 1, 1048575, 983044, 1, 983039, 983044, 1, 393225, 983044, 1, 327689, 983044, 1, 327688, 983044, 1, 262152, 983044, 1, 196616, 983044, 1, 196615, 983044, 1, 196614, 1048580, 1, 983038, 983044, 1, 983037, 983044, 1, 1048573, 983044, 1, 1048572, 983044, 1, 1114108, 983044, 1, 1179644, 983044, 1, 1179643, 983044, 1, 1245179, 983044, 1, 1245178, 983044, 1, 1310713, 983044, 1, 1310712, 983044, 1, 1310711, 983044, 1, 1310710, 983044, 1, 1376246, 983044, 1, 1376245, 983044, 1, 1376244, 983044, 1, 1376243, 983044, 1, 1441779, 983044, 1, 1441778, 983044, 1, 1376242, 983044, 1, 1441777, 983044, 1, 1376240, 983044, 1, 1376239, 983044, 1, 1310703, 983044, 1, 1310702, 983044, 1, 1310701, 983044, 1, 1245165, 983044, 1, 1245164, 983044, 1, 1179628, 983044, 1, 1114092, 983044, 1, 1048556, 983044, 1, 1048555, 983044, 1, 983019, 983044, 1, 917483, 983044, 1, 917482, 983044, 1, 851946, 983044, 1, 851947, 983044, 1, 786410, 983044, 1, 720874, 983044, 1, 720875, 983044, 1, 655339, 983044, 1, 589803, 983044, 1, 524267, 983044, 1, 524268, 983044, 1, 458732, 983044, 1, 458733, 983044, 1, 393198, 983044, 1, 393199, 983044, 1, 327663, 983044, 1, 327664, 983044, 1, 327665, 983044, 1, 786438, 1048580, 1, 720902, 1048580, 1, 655366, 1048580, 1, 589830, 1048580, 1, 524294, 1048580, 1, 458758, 1048580, 1, 393222, 1048580, 1, 327686, 1048580, 1, 262150, 1048580, 1, 131078, 1048580, 1, 65542, 1048580, 1, 6, 1048580, 1, -65530, 1048580, 1, -131066, 1048580, 1, 786437, 917508, 1342177282, 720901, 917508, 1342177282, 655365, 917508, 1342177282, 589829, 917508, 1342177282, 786436, 851972, 2, 720900, 851972, 2, 655364, 851972, 2, 589828, 851972, 2, 524292, 851972, 1, 524293, 917508, 1, 851972, 851972, 3, 1114120, 983044, 1, 1114121, 983044, 1, 1114122, 983044, 1, 1114123, 983044, 1, 1114124, 983044, 1, 1114125, 983044, 1, 1114126, 983044, 1, 1114127, 983044, 1, 1114128, 983044, 1, 1114129, 983044, 1, 1114130, 983044, 1, 1114131, 983044, 1, 1114132, 983044, 1, 1114133, 983044, 1, 1114134, 983044, 1, 1114135, 983044, 1, 1114136, 983044, 1, 1114137, 983044, 1, 1114138, 983044, 1, 1114139, 983044, 1, 1114140, 983044, 1, 1114141, 983044, 1, 1114142, 983044, 1)
+
+[node name="animation1" type="Node" parent="."]
+script = ExtResource("3_f2f7x")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(189.109, 64.5)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame_progress = 0.159198
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(121.109, 75.5)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame_progress = 0.0107618
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(77.1094, 90.5)
+rotation = 0.0580684
+scale = Vector2(0.992745, 1)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame = 1
+frame_progress = 0.887938
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(127.109, 68.5)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame_progress = 0.0539746
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(115.109, 101.5)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame_progress = 0.329314
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation1"]
+position = Vector2(126.109, 98.5)
+sprite_frames = SubResource("SpriteFrames_ofs30")
+animation = &"new_animation"
+frame_progress = 0.0758902
+
+[node name="Player" parent="." instance=ExtResource("7_j2rbs")]
+position = Vector2(152, 92)
+can_dash = true
+
+[node name="animation2" type="Node" parent="."]
+script = ExtResource("10_31mj1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(92, 99)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.396862
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(227, 98)
+rotation = -0.261799
+scale = Vector2(0.812839, 10.9392)
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.28916
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(111, 108)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.271263
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(93, 88)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.2553
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(94, 77)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.142533
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(102, 96)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.0257194
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(161, 82)
+rotation = -0.261799
+scale = Vector2(0.378367, 7.1695)
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.862868
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(187, 102)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.571647
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="animation2"]
+position = Vector2(189, 71)
+rotation = -0.261799
+sprite_frames = SubResource("SpriteFrames_60irp")
+animation = &"new_animation"
+frame_progress = 0.276505
+
+[node name="animation3" type="Node" parent="."]
+script = ExtResource("11_vwntb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="animation3"]
+modulate = Color(1, 1, 1, 0.403922)
+position = Vector2(235, 41)
+scale = Vector2(9.3125, 5.4375)
+sprite_frames = SubResource("SpriteFrames_bukti")
+animation = &"new_animation"
+frame_progress = 0.955867
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="animation3"]
+modulate = Color(1, 1, 1, 0.403922)
+position = Vector2(51, 42)
+scale = Vector2(9.3125, 5.4375)
+sprite_frames = SubResource("SpriteFrames_bukti")
+animation = &"new_animation"
+frame_progress = 0.955867
+
+[node name="Coins" type="Node" parent="."]
+script = ExtResource("14_sidq4")
+
+[node name="Coin8" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(76, 91)
+
+[node name="Coin9" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(122, 57)
+
+[node name="Coin10" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(175, 58)
+
+[node name="Coin11" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(221, 84)
+
+[node name="Coin12" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(121, 76)
+
+[node name="Coin13" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(155, 117)
+
+[node name="Turrets" type="Node" parent="."]
+script = ExtResource("16_b1v5y")
+
+[node name="Turret" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(152, 60)
+rotation = 1.5708
+fire_rate = 0.5
+
+[node name="Turret2" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(227, 128)
+rotation = 3.14159
+fire_rate = 2.0
+
+[node name="Turret3" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(77, 81)
+rotation = 1.5708
+fire_rate = 0.5
+
+[node name="Turret4" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(152, 67)
+rotation = 1.5708
+fire_rate = 0.5
+
+[node name="Turret5" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(174, 71)
+rotation = 1.5708
+fire_rate = 0.5
+
+[node name="Turret6" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(215, 118)
+rotation = 3.14159
+fire_rate = 2.0
+
+[node name="Turret7" parent="Turrets" instance=ExtResource("17_gsjym")]
+position = Vector2(226, 112)
+rotation = 3.14159
+fire_rate = 2.0
+
+[connection signal="child_entered_tree" from="animation1" to="animation1" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="animation2" to="animation2" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="animation3" to="animation3" method="_on_child_entered_tree"]
+[connection signal="child_entered_tree" from="Coins" to="Coins" method="_on_child_entered_tree"]
+[connection signal="child_exiting_tree" from="Coins" to="Coins" method="_on_child_exiting_tree"]
