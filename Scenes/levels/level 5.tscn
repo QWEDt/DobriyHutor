@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://lcxjga581fe0"]
+[gd_scene load_steps=22 format=3 uid="uid://b62vgts5rqkp5"]
 
 [ext_resource type="Script" path="res://Scripts/level 5.gd" id="1_sac5x"]
 [ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="2_foj8r"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://babt5ugp1hyya" path="res://Scenes/coin.tscn" id="15_eog2i"]
 [ext_resource type="Script" path="res://Scripts/Turrets.gd" id="16_b1v5y"]
 [ext_resource type="PackedScene" uid="uid://njo2x3j5715i" path="res://Scenes/turret.tscn" id="17_gsjym"]
+[ext_resource type="AudioStream" uid="uid://cjtsllfqem6r3" path="res://Sound/5flp.mp3" id="18_2bb87"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ofs30"]
 animations = [{
@@ -113,6 +114,7 @@ frame_progress = 0.0758902
 
 [node name="Player" parent="." instance=ExtResource("7_j2rbs")]
 position = Vector2(152, 92)
+pitch = 0.5
 can_dash = true
 
 [node name="animation2" type="Node" parent="."]
@@ -201,7 +203,7 @@ frame_progress = 0.955867
 script = ExtResource("14_sidq4")
 
 [node name="Coin8" parent="Coins" instance=ExtResource("15_eog2i")]
-position = Vector2(76, 91)
+position = Vector2(75, 90)
 
 [node name="Coin9" parent="Coins" instance=ExtResource("15_eog2i")]
 position = Vector2(122, 57)
@@ -217,6 +219,9 @@ position = Vector2(121, 76)
 
 [node name="Coin13" parent="Coins" instance=ExtResource("15_eog2i")]
 position = Vector2(155, 117)
+
+[node name="Coin14" parent="Coins" instance=ExtResource("15_eog2i")]
+position = Vector2(-26, 2)
 
 [node name="Turrets" type="Node" parent="."]
 script = ExtResource("16_b1v5y")
@@ -255,6 +260,9 @@ fire_rate = 2.0
 position = Vector2(226, 112)
 rotation = 3.14159
 fire_rate = 2.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("18_2bb87")
 
 [connection signal="child_entered_tree" from="animation1" to="animation1" method="_on_child_entered_tree"]
 [connection signal="child_entered_tree" from="animation2" to="animation2" method="_on_child_entered_tree"]

@@ -1,7 +1,5 @@
 extends Node
 
-@onready var audio_stream_player_2d = $AudioStreamPlayer2D
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	TextPrinter.print_text("27 апреля. 1982 год. Япония.
@@ -32,4 +30,5 @@ func _ready():
 
 func _unhandled_key_input(event):
 	TextPrinter.label.visible = false
+	TextPrinter.audio_stream_player.stop()
 	get_tree().change_scene_to_file("res://Scenes/levels/control.tscn")
