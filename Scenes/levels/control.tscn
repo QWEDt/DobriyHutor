@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://crsog3csldhkm"]
+[gd_scene load_steps=4 format=3 uid="uid://crsog3csldhkm"]
 
 [ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_x2eil"]
 [ext_resource type="Texture2D" uid="uid://phjr2edo8aab" path="res://Textures/backgroundGirl/backgroundGirl.jpg" id="2_65m12"]
+[ext_resource type="AudioStream" uid="uid://ryge81o1knpt" path="res://Sound/2520341a0c2b83a.mp3" id="3_55gwd"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,6 +51,10 @@ offset_right = 1253.0
 offset_bottom = 1245.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_65m12")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_55gwd")
+autoplay = true
 
 [connection signal="button_up" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_up"]
 [connection signal="button_up" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_button_up"]

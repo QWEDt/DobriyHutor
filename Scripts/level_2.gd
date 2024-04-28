@@ -10,4 +10,4 @@ func _ready():
 	timer.start(16)
 
 func next_level():
-	get_tree().change_scene_to_file("res://Scenes/levels/level_3.tscn")
+	get_tree().change_scene_to_file("res://Scenes/levels/something_strange.tscn")

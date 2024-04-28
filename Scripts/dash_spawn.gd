@@ -2,6 +2,7 @@ extends Area2D
 
 @export var player: CharacterBody2D
 @onready var gpu_particles_2d = $GPUParticles2D
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 
 signal on_dash_get
 
@@ -31,3 +32,4 @@ func _on_body_entered(body):
 	if body.is_in_group("Player"):
 		on_dash_get.emit()
 		player = null
+		audio_stream_player_2d.stop()

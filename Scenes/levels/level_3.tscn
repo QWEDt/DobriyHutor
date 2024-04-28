@@ -1,13 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://c8d7rnddu0xj"]
+[gd_scene load_steps=9 format=3 uid="uid://c8d7rnddu0xj"]
 
 [ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_bgm5k"]
 [ext_resource type="Script" path="res://Scripts/level_3.gd" id="1_uap7b"]
-
 [ext_resource type="PackedScene" uid="uid://prutlb18by4o" path="res://Scenes/player.tscn" id="2_77qgv"]
-[ext_resource type="PackedScene" path="res://Scenes/teleport.tscn" id="3_s80v7"]
-[ext_resource type="PackedScene" path="res://Scenes/dash_spawn.tscn" id="4_pflk5"]
+[ext_resource type="PackedScene" uid="uid://cf3lk3mqdycjf" path="res://Scenes/teleport.tscn" id="3_s80v7"]
+[ext_resource type="PackedScene" uid="uid://lk08n4em5sl6" path="res://Scenes/dash_spawn.tscn" id="4_pflk5"]
 [ext_resource type="Script" path="res://Scripts/Turrets.gd" id="5_68ki6"]
-[ext_resource type="PackedScene" path="res://Scenes/turret.tscn" id="5_ej4xf"]
+[ext_resource type="PackedScene" uid="uid://njo2x3j5715i" path="res://Scenes/turret.tscn" id="5_ej4xf"]
+[ext_resource type="AudioStream" uid="uid://i4mqr86t8846" path="res://Sound/horror-atmosphere-background(chosic.com).mp3" id="8_xddmx"]
 
 [node name="Level3" type="Node"]
 script = ExtResource("1_uap7b")
@@ -19,6 +19,7 @@ layer_0/tile_data = PackedInt32Array(0, 1048580, 0, 1, 1114116, 0, 2, 1114116, 0
 
 [node name="Player" parent="." instance=ExtResource("2_77qgv")]
 position = Vector2(75, 144)
+pitch = 0.5
 
 [node name="DashSpawn" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_pflk5")]
 position = Vector2(191, 46)
@@ -68,5 +69,10 @@ visible = false
 position = Vector2(227, 128)
 rotation = 3.14159
 fire_rate = 2.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_xddmx")
+volume_db = -4.0
+autoplay = true
 
 [connection signal="on_dash_get" from="DashSpawn" to="Turrets" method="_on_dash_spawn_on_dash_get"]

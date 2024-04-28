@@ -1,4 +1,5 @@
 extends CanvasLayer
+@onready var audio_stream_player = $AudioStreamPlayer
 
 @onready var label = $Label
 var idx = 0
@@ -14,9 +15,13 @@ func print_text(text: String):
 	var timer = Timer.new()
 	add_child(timer)
 	
+	audio_stream_player.play()
+	
 	for letter in text:
 		label.text += letter
 		timer.start(0.08)
 		await timer.timeout
+	
+	audio_stream_player.stop()
 	
 	timer.queue_free()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://lk08n4em5sl6"]
+[gd_scene load_steps=6 format=3 uid="uid://lk08n4em5sl6"]
 
 [ext_resource type="Texture2D" uid="uid://csull877tgyof" path="res://Textures/coin.jpg" id="1_gy0a3"]
 [ext_resource type="Script" path="res://Scripts/dash_spawn.gd" id="1_u6fkx"]
+[ext_resource type="AudioStream" uid="uid://75oaqjtpkwcy" path="res://Sound/happy-birthday-music-box(chosic.com).mp3" id="3_xj76v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kfpsk"]
 size = Vector2(14, 14)
@@ -30,5 +31,9 @@ texture = ExtResource("1_gy0a3")
 lifetime = 3.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xj76v")
+autoplay = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
