@@ -1,4 +1,5 @@
 extends Area2D
 
 func _on_body_entered(body):
-	get_tree().change_scene_to_file("res://Scenes/levels/level 5.tscn")
+	if body is CharacterBody2D:
+		get_tree().change_scene_to_file("res://Scenes/levels/level 5.tscn")

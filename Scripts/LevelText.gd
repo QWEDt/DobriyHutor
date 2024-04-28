@@ -7,7 +7,8 @@ signal text_showed
 func _ready():
 	label.visible = false
 
-func show_text(text: String, font_size: int = 140, before_time: float = 1.5, after_time :float = 2.5):
+func show_text(text: String, font_size: int = 140, before_time: float = 1.5,
+ after_time :float = 2.5):
 	var timer = Timer.new()
 	label.label_settings.font_size = font_size
 	add_child(timer)

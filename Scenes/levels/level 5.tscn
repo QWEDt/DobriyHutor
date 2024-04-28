@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://b62vgts5rqkp5"]
+[gd_scene load_steps=24 format=3 uid="uid://b62vgts5rqkp5"]
 
 [ext_resource type="Script" path="res://Scripts/level 5.gd" id="1_sac5x"]
-[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="2_foj8r"]
+[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="2_foj8r"]
 [ext_resource type="Script" path="res://Scripts/animation1.gd" id="3_f2f7x"]
 [ext_resource type="Texture2D" uid="uid://cemlxq2rctuk4" path="res://Textures/Animation1.png" id="4_pcv3a"]
 [ext_resource type="PackedScene" uid="uid://cy3tv37ijomnt" path="res://Scenes/Glitch/glitch1.tscn" id="4_xd0lc"]

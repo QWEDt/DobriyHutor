@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://qeutivfhjs3g"]
+[gd_scene load_steps=9 format=3 uid="uid://dmqhea2eeis3l"]
 
-[ext_resource type="TileSet" uid="uid://c6m3f0uc12ge5" path="res://level_tile_set.tres" id="1_3niyb"]
+[ext_resource type="TileSet" uid="uid://cj7nxx05utgnl" path="res://level_tile_set.tres" id="1_3niyb"]
 [ext_resource type="Script" path="res://Scripts/animation1.gd" id="2_gnsc2"]
 [ext_resource type="PackedScene" uid="uid://cy3tv37ijomnt" path="res://Scenes/Glitch/glitch1.tscn" id="3_22m2r"]
 [ext_resource type="Script" path="res://Scripts/animation3.gd" id="4_3e4xn"]
